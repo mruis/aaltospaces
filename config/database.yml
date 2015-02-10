@@ -24,7 +24,7 @@ default: &default
 development:
   adapter: postgresql
   database: aaltospaces_development
-  username: Miika
+  username: aaltospaces
   password: www
   host: localhost
   encoding: UTF8
