@@ -25,7 +25,7 @@ development:
   adapter: postgresql
   database: aaltospaces_development
   username: aaltospaces
-  password: www
+  password: 1234
   host: localhost
   encoding: UTF8
   pool: 5

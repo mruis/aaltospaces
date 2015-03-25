@@ -1,0 +1,19 @@
+<h1>Edit building</h1>
+<%= form_for @building do |f| %>
+  <%= f.label :name, 'Building name' %>
+  <%= f.text_field :name %>
+  <!-- map div
+  -->
+  <div id="map" style="width: 550px; height: 350px;"></div>
+  <%= f.hidden_field :lat, id: 'map_lat' %>
+  <%= f.hidden_field :lng, id: 'map_lng' %>
+  <%= f.submit 'UPDATE' %>
+<% end %>
+<script>
+  
+  $(document).ready(function(){
+    var building = #{@building.to_json}
+    gmap_form(building);    // form map for edit view (print marker and possibility of put newer)
+  });
+
+</script>
