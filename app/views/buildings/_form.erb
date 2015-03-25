@@ -1,0 +1,18 @@
+<%= form_for(@buildings) do |f| %>
+
+  <div class="name">
+   <%= f.label :name %><br>
+   <%= f.text_field :name %>
+  </div>
+  <div class="lat">
+   <%= f.label :lat %><br>
+   <%= f.text_field :lat %>
+  </div>
+  <div class="lng">
+   <%= f.label :lng %><br>
+   <%= f.text_field :lng %>
+  </div>
+  <div class="actions">
+	<%= f.submit %>
+  </div>
+<% end %>
