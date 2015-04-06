@@ -1,20 +1,10 @@
-<h1>Hello world! It wörks!</h1>
+<h1>Aalto Spaces</h1>
 
 <%= form_tag({controller: "buildings", action: "show"}, method: "get", class: "nifty_form") do %>
-	<%= label_tag(:q, "Search for:") %>
-	<%= text_field_tag(:q) %>
+	<%= label_tag(:name, "Search for a building (later also rooms):") %>
+	<%= text_field_tag(:name) %>
 	<%= submit_tag("Search") %>
 <% end %>
-<script>
-  
-  $(document).ready(function(){
-    var building = #{@building.to_json}    // pass ruby variable to javascript
-    gmap_show(building);    // init show map for building card (only print marker)
-  });
-
-</script>
-
-
 
 All buildings in the database:
 	<% @buildings.each do |building| %>
@@ -22,4 +12,3 @@ All buildings in the database:
 	<%= building.lat %>
 	<%= building.lng %>
 	<% end %>
-<div id="map-canvas"></div>

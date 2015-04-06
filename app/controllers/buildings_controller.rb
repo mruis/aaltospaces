@@ -11,7 +11,7 @@ class BuildingsController < ApplicationController
   end
 
   def show
-    @building = Building.find(params[:id])
+    @building = Building.where('lower(name) = ?', params[:name].downcase).first
   end
 
   private

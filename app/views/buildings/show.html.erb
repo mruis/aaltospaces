@@ -9,14 +9,15 @@
   lng:
   <%= @building.lng %>
 </p>
-<!-- map div
--->
-<div id="map-canvas" style="width: 550px; height: 350px;"></div>
+
+<div id="map" style="width: 800px; height: 600px;"></div>
+
 <script>
   
   $(document).ready(function(){
-    var building = #{@building.to_json}    // pass ruby variable to javascript
+    var building = '<%= @building.to_json.html_safe %>';
     gmap_show(building);    // init show map for building card (only print marker)
+    console.log(buildin.lat);
   });
 
 </script>

@@ -6,4 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-t1 = Building.create(name: 'T1', lat: 60.186678, lng: 24.82248)
+
+ttalo = Building.create(name: '30 Tietotekniikka', lat: '60.186889', lng: '24.821714')
+Room.create(name: '30T1', code: 'C202', building_id: ttalo.id)

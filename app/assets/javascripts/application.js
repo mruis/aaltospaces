@@ -12,5 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require turbolinks
 //= require_tree .
+//= require underscore-min
+//= require gmaps/google
+//= require buildings
+//= require google_maps_custom
+$(function(){ $(document).foundation(); });
