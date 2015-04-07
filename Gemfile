@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.1.5'
 
 gem 'gmaps4rails'
-gem 'foundation-rails', '~> 5.5.0'
+gem 'foundation-rails', '5.4.5.0'
 gem 'sass-rails', '~>5.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
