@@ -1445,3 +1445,16 @@ $include-html-global-classes: $include-html-classes;
 // $include-accessibility-classes: true;
 
 @import 'foundation';
+
+
+
+
+
+/* Bootstrap Css Map Fix*/
+#map img {
+  max-width: none;
+}
+/* Bootstrap Css Map Fix*/
+#map label {
+  width: auto; display:inline;
+}

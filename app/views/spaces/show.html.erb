@@ -1,0 +1,17 @@
+<h1>
+  <%= @space.name %>
+</h1>
+<p>
+  Address: <%= @space.address %>
+</p>
+
+<div id="map" style="width: 800px; height: 600px;"></div>
+
+<script>
+  
+  $(document).ready(function(){
+    var space = '<%= @space.to_json.html_safe %>';
+    gmap_show(space);    // init show map for space card (only print marker)
+  });
+
+</script>
