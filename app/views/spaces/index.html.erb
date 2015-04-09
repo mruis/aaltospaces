@@ -1,6 +1,6 @@
 <h1>Aalto Spaces</h1>
 
-<%= form_tag({controller: "spaces", action: "show"}, method: "get", id: 'searchbox', class: "nifty_form") do %>
+<%= form_tag({controller: "spaces", action: "index"}, method: "get", id: 'searchbox', class: "nifty_form") do %>
 	<%= label_tag(:name, "Search for a building or a room:") %>
 	<%= text_field_tag(:name) %>
 	<%= submit_tag "Search" %>
