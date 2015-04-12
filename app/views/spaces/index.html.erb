@@ -1,18 +1,46 @@
-<h1>Aalto Spaces</h1>
+<div class="row">
+	<div class="large-12 columns">
+		<h1>Aalto Spaces</h1>
 
-<%= form_tag({controller: "spaces", action: "index"}, method: "get", id: 'searchbox', class: "nifty_form") do %>
-	<%= label_tag(:name, "Search for a building or a room:") %>
-	<%= text_field_tag(:name) %>
-	<%= submit_tag "Search" %>
-<% end %>
 
-<div id="map"></div>
+		<%= form_tag({controller: "spaces", action: "index"}, method: "get", id: 'searchbox', class: "nifty_form") do %>
+			<%= label_tag(:name, "Search for a building or a room:") %>
 
-All spaces in the database:
-<% @spaces.each do |space| %>
-	<br>
-	<%= space.name %>
-<% end %>
+			     <form>
+                  <div class="row collapse">
+     
+                    <div class="large-10 small-8 columns">
+                    	<%= text_field_tag(:name) %>
+                    </div>
+  
+                    <div class="large-2 small-3 columns">
+                      <a href="#" class="postfix button expand"><%= submit_tag "Search" %></a>
+                    </div>
+     
+                  </div>
+                </form>
+			
+			
+
+		<% end %>		
+	</div>
+</div>
+
+
+	<div id="map" class="row" class="large-12 columns"></div>
+
+
+
+<div class="row">
+	<div  id= "allspaces" class="large-12 columns">
+		<hr/>
+		All spaces in the database:
+		<% @spaces.each do |space| %>
+			<br>
+			<%= space.name %>
+		<% end %>
+	</div>
+</div>
 
 
 <script>
