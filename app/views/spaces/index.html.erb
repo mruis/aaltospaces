@@ -2,14 +2,14 @@
 	<div class="large-12 columns">
 		<h1>Aalto Spaces</h1>
 
-		<%= form_tag({controller: "spaces", action: "show"}, method: "get", id: 'searchbox', class: "nifty_form") do %>
-			<%= label_tag(:q, "Search for a building or a room:") %>
+		<%= form_tag({controller: "spaces", action: "index"}, method: "get", id: 'searchbox', class: "nifty_form") do %>
+			<%= label_tag(:name, "Search for a building or a room:") %>
 
 			     <form>
                   <div class="row collapse">
      
                     <div class="large-10 small-8 columns">
-                    	<%= text_field_tag(:q, params[:q]) %>
+                    	<%= text_field_tag(:name) %>
                     </div>
                     <%= submit_tag "Search" %>
   
