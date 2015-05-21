@@ -1,11 +1,6 @@
 class SpacesController < ApplicationController
   def index
-    if params[:name]
-      @space = Space.where('lower(name) = ?', params[:name].downcase).first
-      @spaces = Space.all
-    else
-      @spaces = Space.all
-    end
+    @spaces = Space.all
   end
 
   def new
@@ -13,8 +8,12 @@ class SpacesController < ApplicationController
   end
 
   def show
-    @space = Space.where('lower(name) = ?', params[:name].downcase).first
-    #@space = Space.where('lower(name) LIKE ?', "%#{params[:name].downcase}%").first
+    if params[:q].present?
+      response = Space.search(params[:q].split.join(' AND '))
+      @space = response.results.first._source
+    else
+      @space = []
+    end
   end
 
   private

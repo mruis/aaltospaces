@@ -5,6 +5,8 @@ ruby '2.1.5'
 gem 'gmaps4rails'
 gem 'foundation-rails', '5.4.5.0'
 gem 'sass-rails', '~>5.0.0'
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
@@ -40,6 +42,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
+gem 'bonsai-elasticsearch-rails', group: :production # for Bonsai plugin on heroku
 
 # For heroku, to compile assets (to display styles and load JS lib |raries
 group :production do
