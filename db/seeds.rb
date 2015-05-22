@@ -342,6 +342,7 @@ Space.create(name: '428', code: '428', address: 'Otakaari 7', lat: 60.188972, ln
 Space.create(name: '432', code: '432', address: 'Otakaari 7', lat: 60.188972, lng: 24.833404)
 Space.create(name: '433', code: '433', address: 'Otakaari 7', lat: 60.188972, lng: 24.833404)
 Space.create(name: 'Tietotekniikka', address: 'Konemiehentie 2', lat: 60.18695, lng: 24.821355)
+Space.create(name: 'T-talo', address: 'Konemiehentie 2', lat: 60.18695, lng: 24.821355)
 Space.create(name: 'A106', code: 'A106', address: 'Konemiehentie 2', lat: 60.18695, lng: 24.821355)
 Space.create(name: 'A117', code: 'A117', address: 'Konemiehentie 2', lat: 60.18695, lng: 24.821355)
 Space.create(name: 'A120', code: 'A120', address: 'Konemiehentie 2', lat: 60.18695, lng: 24.821355)

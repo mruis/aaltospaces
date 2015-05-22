@@ -1,50 +1,54 @@
 function gmap_show(company) {
   company = JSON.parse(company);
   if (company == null) {
-    showMainBuildingView();
+    showNotFoundView();
   } else {
     showDefinedBuildingView(company);
   }
 }
 
-function showMainBuildingView() {
-  handler = Gmaps.build('Google');
-  handler.buildMap(
-    { 
-      provider: {}, 
-      internal: {id: 'map'}
-    }, 
-    function() {
-      markers = handler.addMarkers([
-        {
-        "lat": 60.185921,
-        "lng": 24.827158,
-        "infowindow": "<b> Päärakennus </b> <br> Otakaari 1"
-      }
-    ]);
-    handler.bounds.extendWith(markers);
-    handler.fitMapToBounds();
-    handler.getMap().setZoom(15);
-  });  
+function showNotFoundView() {
+  var latlng = new google.maps.LatLng(60.1880882,24.8367568);
+  var options = {
+    zoom: 15,
+    center: latlng
+  }
+  var map = new google.maps.Map(document.getElementById("map"), options);
+
+  var infowindow = new google.maps.InfoWindow({
+    content: "<b> Space was not found </b> <br> However, right here is Smökki!"
+  });
+
+
+  var marker = new google.maps.Marker({
+    position: latlng,
+    map: map
+  });
+
+  infowindow.open(map,marker);
 }
 
-function showDefinedBuildingView(company) {
-  handler = Gmaps.build('Google');
-  handler.buildMap(
-    { 
-      provider: {}, 
-      internal: {id: 'map'}
-    }, 
-    function() {
-      markers = handler.addMarkers([
-        {
-        "lat": company.lat,
-        "lng": company.lng,
-        "infowindow": "<b>" + company.name + "</b> <br>" + company.address
-      }
-    ]);
-    handler.bounds.extendWith(markers);
-    handler.fitMapToBounds();
-    handler.getMap().setZoom(15);
+function showDefinedBuildingView(space) {
+  var latlng = new google.maps.LatLng(space.lat,space.lng);
+  var options = {
+    zoom: 15,
+    center: latlng
+  }
+  var map = new google.maps.Map(document.getElementById("map"), options);
+
+  var contentText = "<b>" + space.name;
+  space.code != null ? contentText += "</b> <br>" + space.code : "";
+  contentText += "</b> <br>" + space.address;
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentText
   });
+
+
+  var marker = new google.maps.Marker({
+    position: latlng,
+    map: map
+  });
+
+  infowindow.open(map,marker);
 }
