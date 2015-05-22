@@ -19,4 +19,5 @@
 //= require gmaps/google
 //= require buildings
 //= require google_maps_custom
+//= require typeahead.bundle
 $(function(){ $(document).foundation(); });
