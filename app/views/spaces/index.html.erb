@@ -55,4 +55,8 @@ $('#spacesuggestions .typeahead').typeahead({
   $(searchbox).blur();
 });
 
+$(searchbox).on('focus', function() {
+    document.body.scrollTop = $(this).offset().top;
+});
+
 </script>
