@@ -1,7 +1,7 @@
 class SpacesController < ApplicationController
   def index
     if params[:search]
-      @space = Space.where('name = ? OR code = ?', params[:search], params[:search]).first
+      @space = Space.where('lower(name) = ? OR lower(code) = ?', params[:search].downcase, params[:search].downcase).first
     else
       @space = Space.where('name = ?', "Päärakennus").first
     end

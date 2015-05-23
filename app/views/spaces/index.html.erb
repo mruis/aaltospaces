@@ -49,6 +49,8 @@ $('#spacesuggestions .typeahead').typeahead({
 {
   name: 'spaces',
   source: substringMatcher(spaces)
+}).on('typeahead:selected', function(e, data) {
+  $(searchbox).submit();
 });
 
 </script>

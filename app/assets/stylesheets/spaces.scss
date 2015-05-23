@@ -12,10 +12,14 @@ input[type="submit"]
 #map {
 	height: 75%;
 	width: 90%;
+	margin-top: 20px;
+	position: relative;
+	left: -2px;
 }
 
 .twitter-typeahead {
 	width: 100%;
+	height: 37px;
 }
 
 #spacesuggestions {
@@ -23,7 +27,7 @@ input[type="submit"]
 }
 
 .tt-input {
-	width: 600px;
+	width: 300px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -34,7 +38,7 @@ input[type="submit"]
 }
 
 .tt-menu {
-  width: 422px;
+  width: 300px;
   margin-top: 4px;
   padding: 4px 0;
   background-color: #fff;
