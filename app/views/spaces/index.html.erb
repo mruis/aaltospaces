@@ -51,6 +51,8 @@ $('#spacesuggestions .typeahead').typeahead({
   source: substringMatcher(spaces)
 }).on('typeahead:selected', function(e, data) {
   $(searchbox).submit();
+  document.activeElement.blur();
+  $(searchbox).blur();
 });
 
 </script>
