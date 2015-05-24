@@ -10,12 +10,11 @@ input[type="submit"]
 }
 
 #map {
+  min-height: 500px;
 	height: 75%;
-	width: 90%;
+	width: 95%;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	position: relative;
-	left: -2px;
 }
 
 .twitter-typeahead {
@@ -24,7 +23,7 @@ input[type="submit"]
 }
 
 #spacesuggestions {
-	width: 87%;
+	width: 86%;
 }
 
 .tt-input {
